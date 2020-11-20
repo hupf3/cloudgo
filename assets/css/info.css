@@ -1,0 +1,28 @@
+/* 设置背景颜色 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sana-fserif;
+    background: #34495e;
+}
+
+/* 居中展示 */
+.box{
+    width: 300px;
+    padding: 5px;
+    position: absolute;  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    background: white;
+    text-align: center; 
+}
+
+/* 字体颜色 */
+.box td{
+    color: red;    /* 设置字体颜色 */
+    font-weight: 500;  /*  设置字体粗细   */
+    background-color: greenyellow;
+    height: 50px;
+    font-size: 20;
+}

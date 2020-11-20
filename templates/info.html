@@ -1,18 +1,30 @@
 <html>
     
 <head>
-    <!-- <link rel="stylesheet" href="../css/index.css" /> -->
+    <link rel="stylesheet" href="css/info.css" />
 </head>
 
 <body>
-    <table>
+    <table class="box" border="5" border-color="#99ccff">
         <tr>
             <td>Username</td>
-            <td>Password</td>
+            <td>{{.Username}}</td>
         </tr>
         <tr>
-            <td>{{.Username}}</td>
+            <td>Password</td>
             <td>{{.Password}}</td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>{{.ID}}</td>
+        </tr>
+        <tr>
+            <td>School</td>
+            <td>{{.School}}</td>
+        </tr>
+        <tr>
+            <td>GPA</td>
+            <td>{{.GPA}}</td>
         </tr>
     </table>
 </body>

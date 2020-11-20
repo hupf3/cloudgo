@@ -38,7 +38,15 @@ func initRoutes(mx *mux.Router, formatter *render.Render) {
 		}
 	}
 
+	// 测试
+	mx.HandleFunc("/api/test", apiTestHandler(formatter)).Methods("GET")
+
+	// 登录
 	mx.HandleFunc("/", loginHandler(formatter)).Methods("GET")
-	mx.HandleFunc("/info", checkform).Methods("POST")
+
+	// 信息列表
+	mx.HandleFunc("/info", infoHandler).Methods("POST")
+
+	// 静态文件
 	mx.PathPrefix("/").Handler(http.FileServer(http.Dir(webRoot + "/assets/")))
 }
