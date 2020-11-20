@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"gitee.com/zzm99/cloudgo/service"
+	service "github.com/hupf3/cloudgo/serve"
 	flag "github.com/spf13/pflag"
 )
 
