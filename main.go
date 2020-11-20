@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/pmlpml/golang-learning/web/cloudgo/service"
+	"github.com/hupf3/cloudgo/service"
 	flag "github.com/spf13/pflag"
 )
 
