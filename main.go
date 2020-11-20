@@ -3,12 +3,12 @@ package main
 import (
 	"os"
 
-	"github.com/hupf3/cloudgo/service"
+	"./service"
 	flag "github.com/spf13/pflag"
 )
 
 const (
-	PORT string = "8080"
+	PORT string = "8082"
 )
 
 func main() {

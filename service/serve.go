@@ -38,6 +38,7 @@ func initRoutes(mx *mux.Router, formatter *render.Render) {
 		}
 	}
 
-	mx.HandleFunc("/", homeHandler(formatter)).Methods("GET")
+	mx.HandleFunc("/", loginHandler(formatter)).Methods("GET")
+	mx.HandleFunc("/info", checkform).Methods("POST")
 	mx.PathPrefix("/").Handler(http.FileServer(http.Dir(webRoot + "/assets/")))
 }
