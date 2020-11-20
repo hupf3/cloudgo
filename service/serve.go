@@ -13,6 +13,8 @@ import (
 func NewServer() *negroni.Negroni {
 
 	formatter := render.New(render.Options{
+		Directory:  "templates",
+		Extensions: []string{".html"},
 		IndentJSON: true,
 	})
 
@@ -36,7 +38,6 @@ func initRoutes(mx *mux.Router, formatter *render.Render) {
 		}
 	}
 
-	//mx.HandleFunc("/api/test", apiTestHandler(formatter)).Methods("GET")
+	mx.HandleFunc("/", homeHandler(formatter)).Methods("GET")
 	mx.PathPrefix("/").Handler(http.FileServer(http.Dir(webRoot + "/assets/")))
-
 }
